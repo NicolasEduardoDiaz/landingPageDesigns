@@ -1,7 +1,56 @@
-@import url(variables.css);
 
-*{
-padding: 0;
-margin: 0;
-    box-sizing: border-box;
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    height: 100vh;
+    text-align: center;
+    }
+    
+    .top.txt h1,
+    .top.txt p,
+    .top.txt .button {
+        text-align: center;
+    }
+.button{
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+    justify-content: center;
+    width: 7em;
+    height: 2.2em;
+    margin-top: 1em;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    p{
+        font-size: 0.8em;
+    }
+}
+.imagenes{
+    width: 90%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 0.5em;
+}
+.item{
+    border-radius: 0.5em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+@media(max-width:800px){
+    .top_txt{
+        width: 80%;
+    }
+    .imagenes{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
 }
